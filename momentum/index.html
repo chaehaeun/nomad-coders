@@ -8,6 +8,8 @@
     <script defer src="./js/clock.js"></script>
     <script defer src="./js/quotes.js"></script>
     <script defer src="./js/background.js"></script>
+    <script defer src="./js/todo.js"></script>
+    <script defer src="./js/weather.js"></script>
   </head>
   <body>
     <h2 id="clock">
@@ -19,7 +21,15 @@
     </form>
     <h1 id="greeting" class="hidden">
     </h1>
+    <form id = "todo-form">
+      <input type="text" placeholder="Write a To Do and Press Enter" required />
+    </form>
+    <ul id = "todo-list"></ul>
     <div class="quotes">
+      <span></span>
+      <span></span>
+    </div>
+    <div id="weather">
       <span></span>
       <span></span>
     </div>
