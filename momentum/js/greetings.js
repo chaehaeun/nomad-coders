@@ -9,7 +9,7 @@ const onLoginSubmit = (e) => {
   e.preventDefault();
   const username = loginInputTxt.value;
   loginForm.classList.add(HIDDEN__CLASSNAME);
-  localStorage.setItem("USERNAME_KEY", username);
+  localStorage.setItem(USERNAME_KEY, username);
   paintGreetings(username);
 };
 
@@ -19,12 +19,11 @@ const paintGreetings = (username) => {
 };
 
 const savedUserName = localStorage.getItem(USERNAME_KEY);
-
 if (savedUserName == null) {
   // 폼을 보여줘
   loginForm.classList.remove(HIDDEN__CLASSNAME);
   loginForm.addEventListener("submit", onLoginSubmit);
 } else {
   // h1 을 보여줘
-  paintGreetings(username);
+  paintGreetings(savedUserName);
 }
