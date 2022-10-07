@@ -19,13 +19,16 @@ const colors = [
   "#ff3f34",
 ];
 
-const body = document.querySelector("body");
 const btn = document.querySelector("button");
 
 function selectColor() {
   const randomColor = colors[Math.floor(Math.random() * colors.length)];
   const randomColor2 = colors[Math.floor(Math.random() * colors.length)];
-  body.style.background = `linear-gradient(90deg, ${randomColor},${randomColor2})`;
+  document.body.style.background = `linear-gradient(90deg, ${randomColor},${randomColor2})`;
+
+  if (randomColor === randomColor2) {
+    return selectColor();
+  }
 }
 
 btn.addEventListener("click", selectColor);
